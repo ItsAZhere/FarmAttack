@@ -30,15 +30,15 @@ public class placeAnimals : MonoBehaviour {
 	void OnMouseUp()
 	{
 		
-		if (CanPlaceAnimal())
-		{
+		if (CanPlaceAnimal ()) {
 			this.GetComponent<SpriteRenderer> ().color = Color.clear;
-			animal = (GameObject)Instantiate(animalPrefab, transform.position, Quaternion.identity);
+			animal = (GameObject)Instantiate (animalPrefab, transform.position, Quaternion.identity);
 
 			
 			// add audio upon creation of animal
 
-		   // deduct seeds
+			// deduct seeds
 		}
 	}
+
 }

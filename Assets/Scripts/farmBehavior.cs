@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class farmBehavior : MonoBehaviour {
 
-	public static int health;
+	public int health;
 
 	void Start () {
 		
@@ -15,11 +15,6 @@ public class farmBehavior : MonoBehaviour {
 		
 	}
 
-	//void OnTriggerEnter2D(Collision2D coyote){
-		
 
-
-
-	//}
 
 }
