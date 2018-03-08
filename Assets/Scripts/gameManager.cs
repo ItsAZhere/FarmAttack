@@ -49,7 +49,7 @@ public class gameManager : MonoBehaviour {
         {
             
             gold = value;
-            goldLabel.text = "GOLD:  " + gold;
+            goldLabel.text = "Energy:  " + gold;
 
         }
 

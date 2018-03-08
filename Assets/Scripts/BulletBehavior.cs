@@ -53,7 +53,7 @@ public class BulletBehavior : MonoBehaviour {
                     //TODO ADD AUDIO AudioSource audioSource = target.GetComponent<AudioSource>();
                     //TODO ADD AUDIO AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
 
-                    GameManager.Gold += 50;
+                    GameManager.Gold += 10;
                 }
             }
             Destroy(gameObject);

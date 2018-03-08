@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61515312015295280}
   - component: {fileID: 114956119633176136}
   m_Layer: 0
-  m_Name: Farm
+  m_Name: Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,8 +57,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.27}
+    pivot: {x: 0, y: 1}
+    oldSize: {x: 2.32, y: 2.32}
     newSize: {x: 1.28, y: 1.27}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -113,7 +113,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4d46f66a3844e49cfa0b90bc6b9eb539, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af04df5ccbc3e4b6aae649b3f7183c1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

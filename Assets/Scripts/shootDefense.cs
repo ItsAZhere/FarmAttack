@@ -2,24 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootEnemies : MonoBehaviour {
+public class shootDefense : MonoBehaviour {
+
+
 
     public List<GameObject> enemiesInRange; //create list of all enemies within range
     private float lastShotTime;
     private animalData animalData;
 
 
-	
-	void Start () {
+
+    void Start()
+    {
 
         enemiesInRange = new List<GameObject>();
         lastShotTime = Time.time;
         animalData = gameObject.GetComponentInChildren<animalData>();
-		
-	}
-	
-	
-	void Update () {
+
+    }
+
+
+    void Update()
+    {
 
         GameObject target = null;
 
@@ -43,14 +47,14 @@ public class ShootEnemies : MonoBehaviour {
                 Shoot(target.GetComponent<Collider2D>());
                 lastShotTime = Time.time;
             }
-           
+
             // Calculate the rotation angle between the monster and its target.
             // TODO ANIMATION FOR MONSTERS
-          
-          
+
+
         }
-		
-	}
+
+    }
 
 
 
@@ -66,7 +70,7 @@ public class ShootEnemies : MonoBehaviour {
     // add enemies that are in range to list
     void OnTriggerEnter2D(Collider2D other)
     {
-       
+
         if (other.gameObject.tag.Equals("Enemy"))
         {
             // make sure chicken doesn't shoot dead enemies
@@ -94,7 +98,7 @@ public class ShootEnemies : MonoBehaviour {
 
 
 
-void Shoot(Collider2D target)
+    void Shoot(Collider2D target)
     {
         GameObject bulletPrefab = animalData.CurrentLevel.bullet;
 
@@ -123,9 +127,10 @@ void Shoot(Collider2D target)
 
         // create animation and sound effects
         // TODO
-       // Animator animator = animalData.CurrentLevel.visualization.GetComponent<Animator>();
-       // animator.SetTrigger("fireShot");
-       // AudioSource audioSource = gameObject.GetComponent<AudioSource>();
-       // audioSource.PlayOneShot(audioSource.clip);
+        // Animator animator = animalData.CurrentLevel.visualization.GetComponent<Animator>();
+        // animator.SetTrigger("fireShot");
+        // AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+        // audioSource.PlayOneShot(audioSource.clip);
     }
+
 }
