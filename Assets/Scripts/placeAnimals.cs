@@ -38,7 +38,9 @@ public class placeAnimals : MonoBehaviour {
 
             animal = (GameObject)Instantiate(animalPrefab, transform.position, Quaternion.identity);
 			this.GetComponent<SpriteRenderer> ().color = Color.clear;
-			// add audio upon creation of animal
+			
+            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.PlayOneShot(audioSource.clip);
 
             GameManager.Gold -= animal.GetComponent<animalData>().CurrentLevel.cost;
 
@@ -48,7 +50,12 @@ public class placeAnimals : MonoBehaviour {
         else if (CanUpgradeMonster()){
 
             animal.GetComponent<animalData>().IncreaseLevel();
-            // TODO: Add upgrade audio
+
+            // play place_animal audio
+            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.PlayOneShot(audioSource.clip);
+
+            //update gold amount
             GameManager.Gold -= animal.GetComponent<animalData>().CurrentLevel.cost;
         }
 	}

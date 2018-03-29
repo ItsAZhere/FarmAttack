@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour {
 
-    public float speed = 10;
+    public float speed = 2;
     public int damage;
     public GameObject target;
     public Vector3 startPosition;
@@ -40,7 +40,7 @@ public class BulletBehavior : MonoBehaviour {
             if (target != null)
             {
                 
-                // retrieve enemy's healthbar and change it
+                // retrieve target's healthbar and change it
                 Transform healthBarTransform = target.transform.Find("HealthBar");
                 enemyHealth healthBar = healthBarTransform.gameObject.GetComponent<enemyHealth>();
                 healthBar.currentHealth -= Mathf.Max(damage, 0);
@@ -48,11 +48,10 @@ public class BulletBehavior : MonoBehaviour {
 
                 // when enemy health reaches zero, destroy it
                 if (healthBar.currentHealth <= 0)
-                {
+                {   
+                    AudioSource audioSource = target.GetComponent<AudioSource>();
+                    AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
                     Destroy(target);
-                    //TODO ADD AUDIO AudioSource audioSource = target.GetComponent<AudioSource>();
-                    //TODO ADD AUDIO AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
-
                     GameManager.Gold += 10;
                 }
             }

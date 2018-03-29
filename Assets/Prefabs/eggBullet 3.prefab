@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09daf6bb14806470f90e08368743a365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
   damage: 30
   target: {fileID: 0}
   startPosition: {x: 0, y: 0, z: 0}

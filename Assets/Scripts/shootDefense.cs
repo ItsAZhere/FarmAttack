@@ -5,19 +5,21 @@ using UnityEngine;
 public class shootDefense : MonoBehaviour {
 
 
-
-    public List<GameObject> enemiesInRange; //create list of all enemies within range
+    public float fireRate;
+    public GameObject bulletPrefab;
+    public List<GameObject> defensesInRange; //create list of all defenses within range
     private float lastShotTime;
     private animalData animalData;
+
 
 
 
     void Start()
     {
 
-        enemiesInRange = new List<GameObject>();
+        defensesInRange = new List<GameObject>();
         lastShotTime = Time.time;
-        animalData = gameObject.GetComponentInChildren<animalData>();
+      //  animalData = gameObject.GetComponentInChildren<animalData>();
 
     }
 
@@ -27,29 +29,25 @@ public class shootDefense : MonoBehaviour {
 
         GameObject target = null;
 
-        // Determine the target of the animal. Iterate over all enemies in range
-        float minimalEnemyDistance = float.MaxValue;
-        foreach (GameObject enemy in enemiesInRange)
+        // Determine the target. Iterate over all defenses in range
+        foreach (GameObject defense in defensesInRange)
         {
-            float distanceToGoal = enemy.GetComponent<moveEnemy>().DistanceToGoal();
-            if (distanceToGoal < minimalEnemyDistance)
-            {
-                target = enemy;
-                minimalEnemyDistance = distanceToGoal;
-            }
+            
+           
+                target = defense;
         }
 
-        // call shoot if time passed is longer than chicken fire rate
+        // call shoot if time passed is longer than enemy fire rate
         if (target != null)
         {
-            if (Time.time - lastShotTime > animalData.CurrentLevel.fireRate)
+            if (Time.time - lastShotTime > fireRate)
             {
                 Shoot(target.GetComponent<Collider2D>());
                 lastShotTime = Time.time;
             }
 
             // Calculate the rotation angle between the monster and its target.
-            // TODO ANIMATION FOR MONSTERS
+            // TODO ANIMATION FOR Animals
 
 
         }
@@ -59,39 +57,31 @@ public class shootDefense : MonoBehaviour {
 
 
     // remove enemies from list once destroyed
-    void OnEnemyDestroy(GameObject enemy)
+    void OnDefenseDestroy(GameObject defense)
     {
-        enemiesInRange.Remove(enemy);
+        defensesInRange.Remove(defense);
     }
 
 
 
 
-    // add enemies that are in range to list
+    // add defenses that are in range to list
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.gameObject.tag.Equals("Enemy"))
-        {
-            // make sure chicken doesn't shoot dead enemies
-            enemiesInRange.Add(other.gameObject);
-            EnemyDestructionDelegate del = other.gameObject.GetComponent<EnemyDestructionDelegate>();
-            del.enemyDelegate += OnEnemyDestroy;
-        }
+
     }
 
 
 
 
-    // remove enemies from list once out of range 
+    // remove defenses from list once out of range 
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag.Equals("Enemy"))
         {
-            enemiesInRange.Remove(other.gameObject);
-            EnemyDestructionDelegate del =
-                other.gameObject.GetComponent<EnemyDestructionDelegate>();
-            del.enemyDelegate -= OnEnemyDestroy;
+            defensesInRange.Remove(other.gameObject);
+
         }
     }
 
@@ -100,7 +90,7 @@ public class shootDefense : MonoBehaviour {
 
     void Shoot(Collider2D target)
     {
-        GameObject bulletPrefab = animalData.CurrentLevel.bullet;
+        
 
         // Get the start and target positions of the bullet. 
         // Set the z-Position to that of bulletPrefab. 
@@ -111,7 +101,7 @@ public class shootDefense : MonoBehaviour {
         targetPosition.z = bulletPrefab.transform.position.z;
 
 
-        // Instantiate a new bullet using the bulletPrefab for MonsterLevel. 
+        // Instantiate a new bullet
         // Assign the startPosition and targetPosition of the bullet.
 
 
