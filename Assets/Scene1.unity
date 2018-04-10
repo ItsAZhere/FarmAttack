@@ -88,7 +88,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -122,6 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17105713}
   - component: {fileID: 17105712}
+  - component: {fileID: 17105714}
   m_Layer: 0
   m_Name: bg
   m_TagString: Untagged
@@ -186,6 +186,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &17105714
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 17105711}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da875bb013cc44ba0bd05c2beda3619d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &84071795
 Prefab:
   m_ObjectHideFlags: 0
@@ -286,6 +303,11 @@ Prefab:
     - target: {fileID: 1882238916707422, guid: 36ec2f26c381d40f29fe034f86dae752, type: 2}
       propertyPath: m_Name
       value: openSpot_prefab (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 82360260798220916, guid: 36ec2f26c381d40f29fe034f86dae752,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36ec2f26c381d40f29fe034f86dae752, type: 2}
@@ -678,7 +700,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
