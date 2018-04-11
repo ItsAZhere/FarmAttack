@@ -42,12 +42,14 @@ public class moveEnemy : MonoBehaviour {
             {
               
                 Destroy(gameObject);
-
-                // TODO: Add audio when enemy dies
+                AudioSource audioSource = this.GetComponent<AudioSource>();
+                audioSource.PlayOneShot(audioSource.clip);
 
                 // adjust health when enemy reaches farm
                 gameManager GameManager = GameObject.Find("gameManager").GetComponent<gameManager>();
+                AudioSource audioSource2 = GameObject.FindWithTag("gameManager").GetComponent<AudioSource>();
                 GameManager.Health -= 1;
+                audioSource2.PlayOneShot(audioSource.clip);
             }
         }
 		
