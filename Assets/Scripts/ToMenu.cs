@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ToInstructions : MonoBehaviour {
+public class ToMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +15,6 @@ public class ToInstructions : MonoBehaviour {
 		
 	}
 	public void PlayGame() {
-		SceneManager.LoadScene (2); //if the button is pressed, go to the instructions
+		SceneManager.LoadScene (0); //if the button is pressed, go to the menu
 	}
 }
