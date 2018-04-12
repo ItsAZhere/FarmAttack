@@ -32,7 +32,10 @@ public class gameManager : MonoBehaviour {
 
 	void Update () {
         
+		if (wave > 3) {
+			SceneManager.LoadScene (4); //if wave is 6, go to win screen
 
+		}
 
 		
 	} 
@@ -78,6 +81,7 @@ public class gameManager : MonoBehaviour {
             }
             waveLabel.text = "WAVE:  " + (wave + 1);
         }
+	
     }
 
 
