@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour {
 
@@ -104,6 +105,8 @@ public class gameManager : MonoBehaviour {
             {
                 gameOver = true;
                 Debug.Log("GAME OVER");
+				SceneManager.LoadScene (3); //if health is out, go to end screen
+
 
             //TODO    GameObject gameOverText = GameObject.FindGameObjectWithTag("GameOver");
             //TODO    gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
@@ -123,7 +126,6 @@ public class gameManager : MonoBehaviour {
             }
         }
     }
-
 
 
 
