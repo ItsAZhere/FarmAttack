@@ -88,6 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -429,7 +430,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 113554133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.99, y: 5.68, z: 0}
+  m_LocalPosition: {x: -12.61, y: 5.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 907595047}
@@ -711,7 +712,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 615461280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.65, y: 6, z: 0}
+  m_LocalPosition: {x: 13.03, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 907595047}
@@ -781,6 +782,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -1282,7 +1284,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 908422488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.36, y: 1.5, z: 0}
+  m_LocalPosition: {x: 12.81, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 907595047}
@@ -1389,7 +1391,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1033999845}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.21, y: 0.85, z: 0}
+  m_LocalPosition: {x: -10.32, y: 0.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 907595047}
@@ -1620,7 +1622,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397990109}
-  m_Text: 'GOLD:'
+  m_Text: 'GOLD :'
   m_OffsetZ: 0
   m_CharacterSize: 0.15
   m_LineSpacing: 1
@@ -1633,7 +1635,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: e51c1073981994bf99cee11d24e8b478, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4293792364
+    rgba: 4278244351
 --- !u!23 &1397990111
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1675,7 +1677,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397990109}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.63, y: 8.09, z: -0.8482414}
+  m_LocalPosition: {x: -4.03, y: 8.09, z: -0.8482414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 178651528}
@@ -1710,7 +1712,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1608642128}
-  m_Text: 'WAVE: '
+  m_Text: 'WAVE :'
   m_OffsetZ: 0
   m_CharacterSize: 0.15
   m_LineSpacing: 1
@@ -1723,7 +1725,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: e51c1073981994bf99cee11d24e8b478, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4293792364
+    rgba: 4278244351
 --- !u!23 &1608642130
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2102,7 +2104,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1740160558}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.88, y: -4.45, z: 0}
+  m_LocalPosition: {x: -9.57, y: -4.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 907595047}
@@ -2354,7 +2356,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: e51c1073981994bf99cee11d24e8b478, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4293792364
+    rgba: 4278244351
 --- !u!23 &1956178566
 MeshRenderer:
   m_ObjectHideFlags: 0

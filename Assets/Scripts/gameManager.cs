@@ -53,7 +53,7 @@ public class gameManager : MonoBehaviour {
         {
             
             gold = value;
-            goldLabel.text = "ENERGY:  " + gold;
+            goldLabel.text = "GOLD :  " + gold;
 
         }
 
@@ -79,7 +79,7 @@ public class gameManager : MonoBehaviour {
                   // TODO nextWaveLabels[i].GetComponent<Animator>().SetTrigger("nextWave");
                 }
             }
-            waveLabel.text = "WAVE:  " + (wave + 1);
+            waveLabel.text = "WAVE :  " + (wave + 1);
         }
 	
     }
@@ -102,7 +102,7 @@ public class gameManager : MonoBehaviour {
             }
 
             health = value;
-            healthLabel.text = "HEALTH:  " + health;
+            healthLabel.text = "HEALTH :  " + health;
 
 
             if (health <= 0 && !gameOver)

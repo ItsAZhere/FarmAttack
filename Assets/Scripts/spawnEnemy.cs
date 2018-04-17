@@ -55,6 +55,7 @@ public class spawnEnemy : MonoBehaviour {
                 lastSpawnTime = Time.time;
                 GameObject newEnemy = (GameObject)
                     Instantiate(waves[currentWave].enemyPrefab);
+                newEnemy.transform.position = waypoints[0].transform.position;
                 newEnemy.GetComponent<moveEnemy>().waypoints = waypoints;
                 enemiesSpawned++;
             }
