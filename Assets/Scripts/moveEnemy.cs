@@ -36,7 +36,7 @@ public class moveEnemy : MonoBehaviour {
              
                 currentWaypoint++;
                 lastWaypointSwitchTime = Time.time;
-                // TODO: Rotate into move direction
+                RotateIntoMoveDirection();
             }
             else
             {
@@ -73,4 +73,34 @@ public class moveEnemy : MonoBehaviour {
         }
         return distance;
     }
+
+
+    //rotates enemy based on direction that it's supposed to be facing 
+    private void RotateIntoMoveDirection()
+    {
+
+        if (currentWaypoint == 2)
+        {
+            this.GetComponent<Animator>().SetBool("ratDown", true);
+            this.GetComponent<Animator>().SetBool("ratLeft", true);
+            this.GetComponent<Animator>().SetBool("ratAnimation", true);
+
+        }
+        else if (currentWaypoint == 3)
+        {
+            this.GetComponent<Animator>().SetBool("ratLeft", true);
+            this.GetComponent<Animator>().SetBool("ratDown", false);
+            this.GetComponent<Animator>().SetBool("ratAnimation", false);
+
+        }
+
+        else if (currentWaypoint == 4)
+        {
+            this.GetComponent<Animator>().SetBool("ratLeft", false);
+            this.GetComponent<Animator>().SetBool("ratDown", true);
+            this.GetComponent<Animator>().SetBool("ratAnimation", false);
+        }
+       
+    }
+
 }

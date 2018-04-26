@@ -570,6 +570,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 212932626004237020, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a, type: 2}
   m_IsPrefabParent: 0
@@ -727,6 +732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 630993237}
   - component: {fileID: 630993236}
+  - component: {fileID: 630993239}
   - component: {fileID: 630993235}
   - component: {fileID: 630993234}
   - component: {fileID: 630993238}
@@ -811,6 +817,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07da70e8c5f14edcb0951c7ed994bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &630993239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 630993233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e939694bafc33436ab271de94e675ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDecayStart: 0.002
+  shakeIntensityStart: 0.03
 --- !u!4 &689851229 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4706051023823646, guid: 36ec2f26c381d40f29fe034f86dae752,
@@ -1247,20 +1266,16 @@ MonoBehaviour:
   waves:
   - enemyPrefab: {fileID: 1841842376000700, guid: 5c4b824660c354509954f4061e40f41f,
       type: 2}
-    spawnInterval: 1
-    maxEnemies: 10
+    spawnInterval: 2
+    maxEnemies: 8
   - enemyPrefab: {fileID: 1546620087047246, guid: 282c5a856dd284aa6b0d3debddd55180,
       type: 2}
-    spawnInterval: 2
-    maxEnemies: 10
-  - enemyPrefab: {fileID: 1841842376000700, guid: 5c4b824660c354509954f4061e40f41f,
-      type: 2}
-    spawnInterval: 2
-    maxEnemies: 15
-  - enemyPrefab: {fileID: 1546620087047246, guid: 282c5a856dd284aa6b0d3debddd55180,
+    spawnInterval: 1.5
+    maxEnemies: 8
+  - enemyPrefab: {fileID: 1422983683611690, guid: 2415fa6e3382a46dfb76b77448e0d761,
       type: 2}
     spawnInterval: 1
-    maxEnemies: 5
+    maxEnemies: 1
   timeBetweenWaves: 5
 --- !u!1 &908422488
 GameObject:
@@ -1956,6 +1971,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 212932626004237020, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a, type: 2}
   m_IsPrefabParent: 0
@@ -2015,6 +2035,11 @@ Prefab:
       propertyPath: m_Name
       value: health_Indicator 4
       objectReference: {fileID: 0}
+    - target: {fileID: 212932626004237020, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a, type: 2}
   m_IsPrefabParent: 0
@@ -2073,6 +2098,11 @@ Prefab:
     - target: {fileID: 4912021517450978, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 212932626004237020, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a, type: 2}
@@ -2310,6 +2340,11 @@ Prefab:
     - target: {fileID: 4912021517450978, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 212932626004237020, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a5b26c3663ba4442b4d69fb58f0ba5a, type: 2}

@@ -32,9 +32,9 @@ public class gameManager : MonoBehaviour {
 
 	void Update () {
         
-		if (wave > 3) {
-			SceneManager.LoadScene (4); //if wave is 6, go to win screen
-
+		if (wave == 3) {
+			SceneManager.LoadScene (3); 
+            // win screen
 		}
 
 		
@@ -74,10 +74,7 @@ public class gameManager : MonoBehaviour {
             wave = value;
             if (!gameOver)
             {
-                for (int i = 0; i < nextWaveLabels.Length; i++)
-                {
-                  // TODO nextWaveLabels[i].GetComponent<Animator>().SetTrigger("nextWave");
-                }
+               
             }
             waveLabel.text = "WAVE :  " + (wave + 1);
         }
@@ -97,7 +94,7 @@ public class gameManager : MonoBehaviour {
             // 1
             if (value < health)
             {
-              // TODO Camera.main.GetComponent<CameraShake>().Shake();
+              Camera.main.GetComponent<CameraShake>().Shake();
 
             }
 
@@ -108,12 +105,9 @@ public class gameManager : MonoBehaviour {
             if (health <= 0 && !gameOver)
             {
                 gameOver = true;
-                Debug.Log("GAME OVER");
-				SceneManager.LoadScene (3); //if health is out, go to end screen
+				SceneManager.LoadScene (4); //if health is out, go to end screen
 
 
-            //TODO    GameObject gameOverText = GameObject.FindGameObjectWithTag("GameOver");
-            //TODO    gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
             }
 
 

@@ -122,9 +122,7 @@ void Shoot(Collider2D target)
 
 
 
-        // TODO  create animation and sound effects 
-        // Animator animator = animalData.CurrentLevel.visualization.GetComponent<Animator>();
-        // animator.SetTrigger("fireShot");
+       
         AudioSource audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.PlayOneShot(audioSource.clip);
     }
